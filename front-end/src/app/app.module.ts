@@ -18,6 +18,7 @@ import { FruitsComponent } from './fruits/fruits.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { SigninService } from './services/signin.service';
 import { UserprofileService } from './services/userprofile.service';
+import { PostingComponent } from './posting/posting.component';
 
 
 
@@ -30,7 +31,8 @@ import { UserprofileService } from './services/userprofile.service';
     SigninComponent,
     FlowersComponent,
     FruitsComponent,
-    UserprofileComponent
+    UserprofileComponent,
+    PostingComponent
 
   ],
   imports: [
