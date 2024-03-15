@@ -8,6 +8,7 @@ import { FlowersComponent } from './flowers/flowers.component';
 import { FruitsComponent } from './fruits/fruits.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { PostingComponent } from './posting/posting.component';
+import { FlowerspostComponent } from './flowerspost/flowerspost.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/signup', pathMatch: 'full' },
   { path: 'fruits', component:FruitsComponent},
   { path: 'userprofile', component: UserprofileComponent},
-  { path: 'posting', component: PostingComponent}
+  { path: 'posting', component: PostingComponent},
+  { path: 'flowerspost', component: FlowerspostComponent}
 ];
 
 @NgModule({
