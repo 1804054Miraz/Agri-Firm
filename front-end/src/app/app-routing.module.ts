@@ -9,6 +9,7 @@ import { FruitsComponent } from './fruits/fruits.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { PostingComponent } from './posting/posting.component';
 import { FlowerspostComponent } from './flowerspost/flowerspost.component';
+import { FruitspostComponent } from './fruitspost/fruitspost.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'fruits', component:FruitsComponent},
   { path: 'userprofile', component: UserprofileComponent},
   { path: 'posting', component: PostingComponent},
-  { path: 'flowerspost', component: FlowerspostComponent}
+  { path: 'flowerspost', component: FlowerspostComponent},
+  { path: 'fruitspost', component: FruitspostComponent},
 ];
 
 @NgModule({
