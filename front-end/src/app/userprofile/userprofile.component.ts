@@ -1,6 +1,5 @@
-// userprofile.component.ts
-
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { UserProfileService } from '../services/userprofile.service';
 
 @Component({
@@ -10,20 +9,33 @@ import { UserProfileService } from '../services/userprofile.service';
 })
 export class UserProfileComponent implements OnInit {
   userProfile: any;
+  email?: string;
 
-  constructor(private userProfileService: UserProfileService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private userProfileService: UserProfileService
+  ) {}
 
   ngOnInit(): void {
-    // Assuming you have the user's email (retrieve it from AuthService or another source)
-    const userEmail = 'user@example.com';
+    // Get user email from route params
+    this.route.queryParams.subscribe(params => {
+      this.email = params['email'];
+      this.getUserProfile();
+    });
+  }
 
-    this.userProfileService.getUserProfile(userEmail).subscribe(
-      (user) => {
-        this.userProfile = user;
-      },
-      (error) => {
-        console.error('Error fetching user profile:', error);
-      }
-    );
+  getUserProfile(): void {
+    if (this.email) {
+      this.userProfileService.getUserProfile(this.email).subscribe(
+        (user) => {
+          this.userProfile = user;
+        },
+        (error) => {
+          console.error('Error fetching user profile:', error);
+        }
+      );
+    } else {
+      console.error('Email is undefined.');
+    }
   }
 }

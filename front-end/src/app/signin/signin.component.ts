@@ -20,7 +20,7 @@ export class SigninComponent {
         (response) => {
           console.log('Sign-in successful:', response);
           // Redirect to the homepage
-          this.router.navigate(['home']); // Replace 'home' with the path to your homepage component
+          this.router.navigate(['/userprofile'], { queryParams: { email: this.email } });
         },
         (error) => {
           console.error('Sign-in failed:', error);
