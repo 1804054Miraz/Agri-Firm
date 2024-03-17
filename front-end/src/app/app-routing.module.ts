@@ -6,15 +6,10 @@ import { AboutComponent } from './about/about.component';
 import { SigninComponent } from './signin/signin.component';
 import { FlowersComponent } from './flowers/flowers.component';
 import { FruitsComponent } from './fruits/fruits.component';
-<<<<<<< HEAD
-import { UserProfileComponent } from './userprofile/userprofile.component';
-import { RegistrationComponent } from './registration/registration.component';
-=======
-import { UserprofileComponent } from './userprofile/userprofile.component';
-import { PostingComponent } from './posting/posting.component';
 import { FlowerspostComponent } from './flowerspost/flowerspost.component';
 import { FruitspostComponent } from './fruitspost/fruitspost.component';
->>>>>>> d9b512ce2bd92931a8e69fc7952cc73305ae0415
+import { RegistrationComponent } from './registration/registration.component';
+import { UserProfileComponent } from './userprofile/userprofile.component';
 
 
 const routes: Routes = [
@@ -26,14 +21,9 @@ const routes: Routes = [
   { path: 'signin', component: SigninComponent },
   { path: 'registration', component: RegistrationComponent},
   { path: 'fruits', component:FruitsComponent},
-<<<<<<< HEAD
-  { path: 'userprofile', component: UserProfileComponent },
-=======
-  { path: 'userprofile', component: UserprofileComponent},
-  { path: 'posting', component: PostingComponent},
+  { path: 'userprofile', component: UserProfileComponent},
   { path: 'flowerspost', component: FlowerspostComponent},
   { path: 'fruitspost', component: FruitspostComponent},
->>>>>>> d9b512ce2bd92931a8e69fc7952cc73305ae0415
 ];
 
 @NgModule({

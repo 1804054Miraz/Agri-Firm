@@ -17,16 +17,12 @@ import { FlowersComponent } from './flowers/flowers.component';
 import { FruitsComponent } from './fruits/fruits.component';
 import { UserProfileComponent } from './userprofile/userprofile.component';
 import { SigninService } from './services/signin.service';
-<<<<<<< HEAD
 import { UserProfileService } from './services/userprofile.service';
 import { RegistrationComponent } from './registration/registration.component';
 import { RegistrationService } from './services/registration.service';
-=======
-import { UserprofileService } from './services/userprofile.service';
 import { PostingComponent } from './posting/posting.component';
 import { FlowerspostComponent } from './flowerspost/flowerspost.component';
 import { FruitspostComponent } from './fruitspost/fruitspost.component';
->>>>>>> d9b512ce2bd92931a8e69fc7952cc73305ae0415
 
 
 
@@ -39,15 +35,11 @@ import { FruitspostComponent } from './fruitspost/fruitspost.component';
     SigninComponent,
     FlowersComponent,
     FruitsComponent,
-<<<<<<< HEAD
     UserProfileComponent,
-    RegistrationComponent
-=======
-    UserprofileComponent,
+    RegistrationComponent,
     PostingComponent,
     FlowerspostComponent,
     FruitspostComponent
->>>>>>> d9b512ce2bd92931a8e69fc7952cc73305ae0415
 
   ],
   imports: [

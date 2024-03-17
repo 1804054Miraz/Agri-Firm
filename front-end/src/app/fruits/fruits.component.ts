@@ -1,4 +1,16 @@
 import { Component } from '@angular/core';
+import { FaConfig } from '@fortawesome/angular-fontawesome';
+import {
+  faPhone,
+  faEnvelope,
+  faLocationDot,
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faFacebookSquare,
+  faTwitterSquare,
+  faInstagramSquare,
+  faPinterestSquare,
+} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-fruits',
@@ -14,17 +26,3 @@ export class FruitsComponent {
   pinteresticon = faPinterestSquare;
   instagramicon = faInstagramSquare;
 }
-import { FaConfig } from '@fortawesome/angular-fontawesome';
-import {
-  faPhone,
-  faEnvelope,
-  faLocationDot,
-} from '@fortawesome/free-solid-svg-icons';
-import {
-  faFacebookSquare,
-  faTwitterSquare,
-  faInstagramSquare,
-  faPinterestSquare,
-} from '@fortawesome/free-brands-svg-icons';
-
-
