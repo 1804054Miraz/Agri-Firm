@@ -1,20 +1,7 @@
 <!-- userprofile.component.html -->
 
-<div class="user-profile-container">
-  <div class="user-profile-header">
-    <h2>User Profile</h2>
-  </div>
-  <div class="user-profile-content">
-    <div class="user-details">
-      <div class="user-detail">
-        <label>Username:</label>
-        <div>{{ userProfile?.username }}</div>
-      </div>
-      <div class="user-detail">
-        <label>Email:</label>
-        <div>{{ userProfile?.email }}</div>
-      </div>
-      <!-- Add more user details as needed -->
-    </div>
-  </div>
+<div *ngIf="userProfile">
+  <h2>{{ userProfile.username }}</h2>
+  <p>Email: {{ userProfile.email }}</p>
+  <!-- Display other user profile data as needed -->
 </div>

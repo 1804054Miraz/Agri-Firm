@@ -15,9 +15,11 @@ import { HomeComponent } from './home/home.component';
 import { SigninComponent } from './signin/signin.component';
 import { FlowersComponent } from './flowers/flowers.component';
 import { FruitsComponent } from './fruits/fruits.component';
-import { UserprofileComponent } from './userprofile/userprofile.component';
+import { UserProfileComponent } from './userprofile/userprofile.component';
 import { SigninService } from './services/signin.service';
-import { UserprofileService } from './services/userprofile.service';
+import { UserProfileService } from './services/userprofile.service';
+import { RegistrationComponent } from './registration/registration.component';
+import { RegistrationService } from './services/registration.service';
 
 
 
@@ -30,7 +32,8 @@ import { UserprofileService } from './services/userprofile.service';
     SigninComponent,
     FlowersComponent,
     FruitsComponent,
-    UserprofileComponent
+    UserProfileComponent,
+    RegistrationComponent
 
   ],
   imports: [
@@ -41,8 +44,9 @@ import { UserprofileService } from './services/userprofile.service';
     FontAwesomeModule,
     HttpClientModule,
     ReactiveFormsModule
+    
   ],
-  providers: [SigninService, UserprofileService], // Add SignupService to providers
+  providers: [SigninService,RegistrationService, UserProfileService], // Add SignupService to providers
   bootstrap: [AppComponent]
 })
 export class AppModule { }

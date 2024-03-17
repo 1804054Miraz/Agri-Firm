@@ -6,7 +6,8 @@ import { AboutComponent } from './about/about.component';
 import { SigninComponent } from './signin/signin.component';
 import { FlowersComponent } from './flowers/flowers.component';
 import { FruitsComponent } from './fruits/fruits.component';
-import { UserprofileComponent } from './userprofile/userprofile.component';
+import { UserProfileComponent } from './userprofile/userprofile.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 const routes: Routes = [
@@ -16,10 +17,9 @@ const routes: Routes = [
   { path: 'agriculture', component: AgricultureComponent },
   { path: 'about', component: AboutComponent },
   { path: 'signin', component: SigninComponent },
-  { path: '', redirectTo: '/signin', pathMatch: 'full' },
-  { path: '', redirectTo: '/signup', pathMatch: 'full' },
+  { path: 'registration', component: RegistrationComponent},
   { path: 'fruits', component:FruitsComponent},
-  { path: 'userprofile', component: UserprofileComponent}
+  { path: 'userprofile', component: UserProfileComponent },
 ];
 
 @NgModule({
