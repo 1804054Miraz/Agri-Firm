@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router'; // Import Router
 import { UserProfileService } from '../services/userprofile.service';
 
 @Component({
@@ -13,6 +13,7 @@ export class UserProfileComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router, // Inject Router
     private userProfileService: UserProfileService
   ) {}
 
@@ -37,5 +38,14 @@ export class UserProfileComponent implements OnInit {
     } else {
       console.error('Email is undefined.');
     }
+  }
+
+  logout(): void {
+    // Clear user session data
+    // For example, you can clear localStorage or sessionStorage
+    localStorage.removeItem('currentUser'); // Assuming user session data is stored in localStorage
+
+    // Redirect user to sign-in page
+    this.router.navigate(['/signin']); // Replace '/signin' with your actual sign-in route
   }
 }

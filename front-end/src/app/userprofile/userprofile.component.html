@@ -51,10 +51,12 @@
           <li class="nav-item pe-3">
             <a class="nav-link" routerLink="/about">About Us</a>
           </li>
-          <!-- <li class="nav-item pe-3 signbackgroundcolorfixed">
-            <a class="nav-link " routerLink="/signin"> <button type="button" class="btn btn-warning  text-white fs-4">SignIn</button> </a>
+          <li class="nav-item pe-3 signbackgroundcolorfixed">
+
+            <button (click)="logout()">Logout</button>
+            <!-- <a class="nav-link " routerLink="/signin"> <button type="button" class="btn btn-warning  text-white fs-4">SignIn</button> </a> -->
           </li>
-          <li class="nav-item pe-3">
+          <!-- <li class="nav-item pe-3">
             <a class="nav-link" routerLink="/registration"> <button type="button" class="btn btn-warning text-white fs-4">Registration</button> </a>
           </li> -->
         </ul>
@@ -68,8 +70,10 @@
       <p>Email: {{ userProfile.email }}</p>
       <p>Log In Successful</p>
       <!-- Display other user profile data as needed -->
+     
     </div>
   </div>
+  
 
 
 </body>
