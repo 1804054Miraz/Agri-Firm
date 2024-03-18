@@ -1,5 +1,79 @@
-<div *ngIf="userProfile">
-  <h2>{{ userProfile.username }}</h2>
-  <p>Email: {{ userProfile.email }}</p>
-  <!-- Display other user profile data as needed -->
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<body>
+  <main>
+    <!-- navbar start  -->
+    <nav
+    class="navbar navbar-expand-lg navbar-primary"
+    style="background-color: #152e52"
+  >
+    <div class="container">
+      <!-- <a class="navbar-brand custombrand" href="#"><img src="assets/images/testLogo.png" alt="logo" srcset=""></a> -->
+      <div class=" navbar-brand logo_design">
+        <a routerLink="/home">
+          <img src="assets/images/logo.png" alt="logo" srcset=""  />
+          <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
+          ROOF AGRICULTURE COMMUNITY
+        </a>
+      </div>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        style="border-color: #fff"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item pe-3">
+            <a class="nav-link" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item pe-3">
+            <a class="nav-link" routerLink="/agriculture">Agriculture</a>
+          </li>
+          <li class="nav-item pe-3">
+            <a class="nav-link" routerLink="/fruits">Fruits</a>
+          </li>
+          <li class="nav-item pe-3">
+            <a class="nav-link" routerLink="/flowers">Flowers</a>
+          </li>
+          <li class="nav-item pe-3">
+            <a class="nav-link" routerLink="/about">About Us</a>
+          </li>
+          <!-- <li class="nav-item pe-3 signbackgroundcolorfixed">
+            <a class="nav-link " routerLink="/signin"> <button type="button" class="btn btn-warning  text-white fs-4">SignIn</button> </a>
+          </li>
+          <li class="nav-item pe-3">
+            <a class="nav-link" routerLink="/registration"> <button type="button" class="btn btn-warning text-white fs-4">Registration</button> </a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </main>  
+
+  <div class="container">
+    <div *ngIf="userProfile" class="user-details" class="success-message">
+      <p>Email: {{ userProfile.email }}</p>
+      <p>Log In Successful</p>
+      <!-- Display other user profile data as needed -->
+    </div>
+  </div>
+
+
+</body>
+</html>
+
+
+

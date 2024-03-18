@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserProfileService {
-  private apiUrl = 'http://localhost:3000/api'; // Replace with your API URL
+  private apiUrl = 'http://localhost:3000'; // Update API URL to remove /api
 
   constructor(private http: HttpClient) { }
 
   getUserProfile(email: string): Observable<any> {
     // Assuming your API endpoint to fetch user profile data is '/userprofile'
-    return this.http.get<any>(`${this.apiUrl}/userprofile/${email}`);
+    return this.http.get<any>(`${this.apiUrl}/userprofile/${email}`); // Remove /userprofile from here
   }
 }
