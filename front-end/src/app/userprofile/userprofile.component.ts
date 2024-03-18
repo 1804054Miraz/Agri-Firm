@@ -41,11 +41,13 @@ export class UserProfileComponent implements OnInit {
   }
 
   logout(): void {
-    // Clear user session data
-    // For example, you can clear localStorage or sessionStorage
-    localStorage.removeItem('currentUser'); // Assuming user session data is stored in localStorage
-
-    // Redirect user to sign-in page
-    this.router.navigate(['/signin']); // Replace '/signin' with your actual sign-in route
+    // Clear any stored user data or tokens
+    localStorage.removeItem('token');
+    
+    // Skip navigation history when redirecting to the sign-in page
+    const navigationExtras = {
+      replaceUrl: true // Replace current URL in history
+    };
+    this.router.navigate(['/signin'], navigationExtras);
   }
 }
